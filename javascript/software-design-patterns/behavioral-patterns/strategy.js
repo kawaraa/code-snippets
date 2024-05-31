@@ -1,0 +1,1 @@
+// Strategy Pattern Defines a family of algorithms, encapsulates each one, and makes them interchangeable. This pattern is useful when you need to select an algorithm dynamically at runtime or when you want to isolate algorithm-specific behavior from the client code.

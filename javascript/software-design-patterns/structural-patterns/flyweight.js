@@ -1,0 +1,1 @@
+// Flyweight Pattern that optimizes memory usage by sharing common state between multiple objects, reducing memory overhead. It's used when a large number of similar objects need to be created, but sharing common state can significantly reduce memory consumption, especially in situations where creating separate objects for each instance would be impractical or inefficient.

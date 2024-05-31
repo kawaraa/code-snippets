@@ -1,0 +1,36 @@
+<svg viewBox="0 0 146 127" class="monitor svg" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+.cls-2{fill:#fff;}
+.cls-3{fill:#c3eefe;}
+.cls-4{fill:#10a7e3;}
+.cls-5,.cls-6{fill:#00e5ae;}
+.cls-5{stroke:#37c5fd;}
+.cls-5,.cls-6,.cls-7{stroke-linecap:round;}
+.cls-5,.cls-6,.cls-7{stroke-miterlimit:10;}
+.cls-5,.cls-7{stroke-width:4.44px;}
+.cls-6{stroke:#10a7e3;stroke-width:7.22px;}
+.cls-7{fill:#93dbf7;stroke:#c3eefe;}
+</style>
+</defs>
+<title>Monitor</title>
+ <g stroke="" stroke-width="" fill="" stroke-linecap="round" stroke-dasharray="null" class="monitor svg-layer">
+    <rect class="cls-4" x="2" y="1.86" height="95.35" width="142.11" rx="2.28"/>
+    <rect class="cls-2" x="8.11" y="7.97" height="72.24" width="129.9"/>
+    <line class="cls-5" x1="43.44" x2="59.73" y1="22.24" y2="22.24"/>
+    <line class="cls-6" x1="30.83" x2="30.83" y1="21.24" y2="21.24"/>
+    <line class="cls-5" x1="44.44" x2="60.73" y1="40.58" y2="40.58"/>
+    <line class="cls-6" x1="31.83" x2="31.83" y1="39.58" y2="39.58"/>
+    <line class="cls-5" x1="44.44" x2="60.73" y1="57.91" y2="57.91"/>
+    <line class="cls-6" x1="31.83" x2="31.83" y1="56.91" y2="56.91"/>
+    <line class="cls-7" x1="69.48" x2="115.23" y1="22.24" y2="22.24"/>
+    <line class="cls-7" x1="70.48" x2="106.2" y1="31.91" y2="31.91"/>
+    <line class="cls-7" x1="70.48" x2="106.2" y1="49.25" y2="49.25"/>
+    <line class="cls-7" x1="69.48" x2="105.2" y1="65.58" y2="65.58"/>
+    <line class="cls-7" x1="70.48" x2="116.23" y1="40.58" y2="40.58"/>
+    <line class="cls-7" x1="69.48" x2="115.23" y1="56.91" y2="56.91"/>
+    <rect class="cls-4" x="61.06" y="94.21" height="25" width="24"/>
+    <path class="cls-4" d="m104.06,125.21l0,-4a3,3 0 0 0 -3,-3l-56,0a3,3 0 0 0 -3,3l0,4l62,0z"/>
+    <circle class="cls-3" cx="73.06" cy="89.71" r="3.5"/>
+  </g>
+</svg>

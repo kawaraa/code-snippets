@@ -1,0 +1,1 @@
+// Interpreter Pattern defines a grammar for interpreting a language and provides a way to evaluate sentences in that language. It's used when you need to interpret and execute expressions or sentences defined in a language, especially when the grammar of the language is well-defined and complex, such as in parsing and interpreting programming languages or query languages.

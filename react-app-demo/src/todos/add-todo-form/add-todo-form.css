@@ -1,0 +1,41 @@
+.add-todo-form {
+  display: flex;
+}
+.inputs-wrapper {
+  flex: auto;
+}
+.input-field {
+  display: flex;
+}
+.input-field > input {
+  flex: auto;
+  padding: 5px 10px;
+  font-size: 18px;
+  border: 0.5px solid gray;
+  border-radius: 25px;
+}
+.select-wrapper {
+  flex: 5;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.select-wrapper:first-child {
+  margin-right: 10px;
+}
+.select-wrapper > label {
+  margin-right: 10px;
+}
+.select-wrapper > select {
+  flex: auto;
+  padding: 2px 10px;
+  font-size: 18px;
+  border: 0.5px solid gray;
+  border-radius: 25px;
+}
+.add-todo-form > .btn {
+  width: 72px;
+  height: 72px;
+  margin-left: 10px;
+  border-radius: 100%;
+}

@@ -1,0 +1,28 @@
+Source: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+
+1- create a server block with the correct directives. Instead of modifying the default configuration file directly,
+sudo vim /etc/nginx/sites-available/your-domain.conf
+
+2- Past this code in your-domain.conf
+server {
+  listen 80;
+  listen [::]:80;
+  server_name admin.kawaraa.com;
+
+ location / { 
+   proxy_pass http://localhost:8080; 
+   }
+}
+
+3- Enable the file by creating a link from it to the sites-enabled directory, which Nginx reads from during startup:
+sudo ln -s /etc/nginx/sites-available/your-domain.conf /etc/nginx/sites-enabled/
+
+4- Test to make sure that there are no syntax errors in any of your Nginx files
+sudo nginx -t
+
+5- Restart Nginx to enable your changes
+sudo systemctl restart nginx
+
+6- Create and install the SSL via CertBot
+7- Alter the server block to redirect the http to https
+

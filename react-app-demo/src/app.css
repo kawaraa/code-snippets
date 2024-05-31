@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", "Comic", sans-serif, Arial, Verdana, "Helvetica", "Helvetica Neue", "Segoe UI",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans";
+}
+.nf {
+  outline: none;
+}
+
+#root {
+  position: relative;
+}
+.container {
+  max-width: 600px;
+  min-height: 100vh;
+  margin: auto;
+}
+.error {
+  max-width: 600px;
+  margin: auto;
+  font-size: 18px;
+  text-align: center;
+  color: tomato;
+}
+.btn {
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  text-align: center;
+  background: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.btn.active,
+.btn:hover {
+  background: tomato;
+}

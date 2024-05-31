@@ -1,0 +1,1 @@
+// Memento Pattern used to minimize memory usage or computational expenses by sharing as much as possible with similar objects. It's used when a large number of similar objects need to be created, but individual instances share common properties or state, thus reducing memory consumption and improving performance.

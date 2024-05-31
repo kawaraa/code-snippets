@@ -1,0 +1,1 @@
+// Command Pattern Encapsulates a request as an object, allowing for parameterization of clients with queues, requests, and operations. This pattern is often used in undo mechanisms, transactional systems, and command-line interfaces.

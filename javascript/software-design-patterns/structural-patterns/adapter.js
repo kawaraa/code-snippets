@@ -1,0 +1,1 @@
+// Adapter Pattern Allows objects with incompatible interfaces to work together by providing a bridge between them. This pattern is commonly used for integrating legacy code or third-party libraries into new systems without modifying their interfaces.

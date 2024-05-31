@@ -1,0 +1,2 @@
+// Repository Pattern Abstracts away the details of data access by providing a common interface for accessing data from different sources, such as databases or web services. This pattern is commonly used in applications that need to decouple their business logic from specific data storage implementations.
+// The Repository Pattern could be categorized under Structural or Behavioral, depending on how it's implemented and used in a specific context

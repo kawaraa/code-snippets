@@ -1,0 +1,37 @@
+[
+  {
+    "method": "get",
+    "url": "/",
+    "path": "/home/home.js"
+  },
+  {
+    "method": "get",
+    "url": "/product/:number",
+    "path": "/product/product.js"
+  },
+  {
+    "method": "get",
+    "url": "/search",
+    "path": "/search/search.js"
+  },
+  {
+    "method": "get",
+    "url": "/shopping-cart",
+    "path": "/shopping-cart/cart.hbs"
+  },
+  {
+    "method": "post",
+    "url": "/checkout",
+    "path": "/checkout/checkout.hbs"
+  },
+  {
+    "method": "get",
+    "url": "/checkout/complete",
+    "path": "/checkout/complete.js"
+  },
+  {
+    "method": "get",
+    "url": "/about",
+    "path": "/about.hbs"
+  }
+]

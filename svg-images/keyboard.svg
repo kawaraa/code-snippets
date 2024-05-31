@@ -1,0 +1,46 @@
+<svg viewBox="0 0 144 68" class="keyboard svg"  xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<defs>
+<style>
+.cls-1{fill:#37c5fd;}
+.cls-2{fill:#fff;}
+.cls-3{fill:#c3eefe;}
+</style>
+</defs>
+<title>Keyboard</title>
+ <g stroke="" stroke-width="" fill="" stroke-linecap="round" stroke-dasharray="null" class="keyboard svg-layer">
+    <path class="cls-1" d="m1,0.91l142.11,0a0,0 0 0 1 0,0l0,62.09a4,4 0 0 1 -4,4l-134.11,0a4,4 0 0 1 -4,-4l0,-62.09a0,0 0 0 1 0,0z" />
+    <rect class="cls-2" x="7.11" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="19.15" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="31.2" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="43.25" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="55.29" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="67.34" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="79.39" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="91.43" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="103.48" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="115.52" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="127.57" y="8.13" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="19.15" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="31.2" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="43.25" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="55.29" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="67.34" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="79.39" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="91.43" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="103.48" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="115.52" y="20.89" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="7.11" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="19.15" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="31.2" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="43.25" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="55.29" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="67.34" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="79.39" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="91.43" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="103.48" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="115.52" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="127.57" y="33.66" height="9.44" width="9.44"   rx="1.11"/>
+    <rect class="cls-2" x="45.41" y="33.66" height="9.44" width="53.29"   rx="1.11"/>
+    <rect class="cls-3" x="53.18" y="46.98" height="14.99" width="35.53"   rx="2.29"/>
+  </g>
+</svg>

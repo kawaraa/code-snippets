@@ -1,0 +1,1 @@
+// Decorator Pattern Adds behavior to objects dynamically without altering their structure. This pattern is often used for extending the functionality of objects in a flexible and reusable way, without subclassing.

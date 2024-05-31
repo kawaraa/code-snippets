@@ -1,0 +1,7 @@
+<svg viewBox="0 0 400 400" class="arrow-down svg" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <title>Arrow Icon</title>
+  <g  stroke="#000000" stroke-width="0" fill="#000000" class="arrow-down svg-layer">
+    <path d="m51.74999,194.3146l145.83247,154.6854l151.41754,-156" />
+    <line stroke-linejoin="bevel" stroke-width="99" x1="199.75" x2="199.75" y1="52.5" y2="280" />
+  </g>
+</svg>

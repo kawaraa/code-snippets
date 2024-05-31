@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?display=swap&family=Lato&family=Roboto&family=Mulish&family=Spartan&family=Quicksand&family=Sora:wght@100&family=Comic+Neue");
+
+:root {
+  --white-color: #ffffff;
+  --bg-white-color: #eceff3;
+  --hover-white-color: #dde0e6;
+  --black-color: #050505;
+  --font-color: #585757;
+  --font-light-color: #9b9797;
+
+  --green-color: #6aa84f;
+  --blue-color: #7b95e0;
+  --pink-color: #fabfbf;
+  --error-color: #ee4e4e;
+  --error-big-color: antiquewhite;
+
+  --p-font-size: 16px;
+  --p-font-weight: lighter;
+
+  /* background: rgb(231, 253, 255); */
+  /* background: rgb(10, 27, 49); */
+  /* background: rgb(28, 194, 191); */
+  /* background: rgb(40, 60, 80); */
+  /* background: rgb(253, 177, 68); */
+  /* #feffff - #DEF2F1 - #3AAFA9 #17252A */
+  --white: #eceff3;
+  --black: #0a1b31;
+  --font: #585757;
+  --blur: #00000033;
+  --font-light: #9b9797;
+  --green: #6aa84f;
+  --blue: #7b95e0;
+  --pink: #fabfbf;
+}
+
+/* -webkit-font-smoothing: antialiased; */
+/* -moz-osx-font-smoothing: grayscale; */
+/* 
+======= Font-family =======
+-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+"Lato", "Roboto", "Comic", "Sora", "Mulish", "Spartan", "Quicksand", sans-serif, Arial, Verdana, "Helvetica", "Helvetica Neue"
+*/
+/* 
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+font-family: "Lato";
+
+Standard breakpoints for devices width
+Mobile, IPads & Tablet up to (770px) 
+Notebook & Laptops (between 1025px And 1200px)
+Desktops, Large screens & TV (from 1200px) 
+*/
+/* =============== Desktops, Large screens & TV styles =============== */
+
+/* =============== Notebook & Laptops styles =============== */
+@media screen and (max-width: 1025px) {
+}
+
+/* =============== Mobile, IPads & Tablet styles =============== */
+@media screen and (max-width: 770px) {
+}

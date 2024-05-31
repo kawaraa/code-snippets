@@ -1,0 +1,40 @@
+const header = require("../../layout/header.hbs");
+const navbar = require("../../layout/navbar.hbs");
+const footer = require("../../layout/footer.hbs");
+
+module.exports = ({user}) => `
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    ${header("Some title related to the content of this page")}
+    <style>
+      /* =============== Mobile, IPads & Tablet styles =============== */
+      @media screen and (max-width: 850px) {}
+    </style>
+  </head>
+
+  <body>
+    ${navbar(user)}
+
+    <div class="root-container">
+      <main class="container home">
+        <h1>NodeJS app.
+        </h1>
+        <p>
+          This is a native NodeJS Server Side app
+        </p>
+
+      </main>
+
+    </div>
+
+    <script>
+
+    </script>
+
+    ${footer(user)}
+  </body>
+
+</html>
+`;

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@gh-pages/qrcode.min.js"></script>
+    <title>Document</title>
+    <style>
+      #container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+      }
+
+      #container > div {
+        margin: 90px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <script>
+      const link = "https://quran.com/ar/page/";
+      const container = document.getElementById("container");
+
+      function makeCode(index) {
+        const wrapper = document.createElement("div");
+        const heading = document.createElement("h2");
+
+        heading.innerText = index;
+        wrapper.id = "id-" + index;
+
+        wrapper.appendChild(heading);
+        container.appendChild(wrapper);
+
+        const qrCoder = new QRCode(wrapper.id);
+        qrCoder.makeCode(link + index);
+      }
+
+      for (let i = 1; i <= 604; i += 1) makeCode(i);
+    </script>
+  </body>
+</html>

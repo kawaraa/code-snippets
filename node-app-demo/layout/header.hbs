@@ -1,0 +1,17 @@
+module.exports = (title, description, keywords) => `
+<title>${title || "The best node server side app ever"}</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="${description || `This is a demo for node server side app.`}" />
+<meta name="keywords"
+  content="${keywords + ` ,NodeJS, Javascript, JS, CSS, HTML, Native Node App without any library or framework`}" />
+<meta name="author" content="Kawara" />
+<link rel="shortcut icon" type="image/ico" sizes="48×48" href="/image/favicon/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="/image/favicon/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/image/favicon/favicon-32x32.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/image/favicon/android-chrome-192x192.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/image/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-status-bar" content="#24305e" />
+<link rel="stylesheet" type="text/css" href="/style/index.css">
+<script src="/script/utility.js"></script>
+`

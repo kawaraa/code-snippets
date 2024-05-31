@@ -1,0 +1,105 @@
+# Below is a comprehensive list of YAML syntax elements and conventions for your reference:
+
+# This is a comment (Every line stars with # is ignored)
+
+# Key-value pairs
+key: value
+
+# Nested key-value pairs (dictionaries)
+parent:
+  child1: value1
+  child2: value2
+
+# Lists
+- item1
+- item2
+- item3
+
+# Nested lists
+list1:
+  - item1
+  - item2
+  - item3
+# Or
+list1: ["item1", 100, 12.23]
+
+# Lists of key value pairs object
+- name: John
+  age: 30
+- name: Jane
+  age: 25
+
+# Multiline strings
+# Use | when you want to preserve the exact formatting, including newlines.
+multiline_block_literal: |
+  Line1
+  Line2
+  Line3
+  # Or
+multiline_block_literal: "Line1 \nLine2 \nLine3"
+# This results in the string:
+# Line1
+# Line2
+# Line3
+
+# Use > when you want to fold the text into a single line, treating newlines as spaces, except for those separating paragraphs.
+multiline_trim_block_folded: >
+  This is a multiline
+  string that folds newlines
+  into spaces.
+# This results in the string:
+# Line1 Line2 Line3
+
+# Data types: Scalars (integers, floats, booleans, nulls)
+integer: 123
+float: 123.45
+boolean_true: true
+boolean_true_yes: yes
+boolean_true_on: on
+boolean_false: false
+boolean_false_no: no
+boolean_false_off: off
+null_value: null
+string: aaa
+string_with_space: "This is a string"
+single_quoted_string: 'This is a single-quoted string'
+escaped_characters: "Line break:\nTab:\tBackslash:\\" # Special characters in strings
+# Dates and times
+date: 2023-01-01
+datetime: 2023-01-01T12:34:56Z
+
+# Aliases and anchors (reuse of nodes)
+default: &default
+  name: Default
+  age: 25
+
+person1:
+  <<: *default
+  name: John
+
+person2:
+  <<: *default
+  name: Jane
+
+# Custom tags (for specific data types)
+!!str "This is a string"
+!!int 123
+!!float 123.45
+
+# Complex keys
+? complex key
+: value
+
+# A placeholder when using template engine or so
+key: {{ .obj.obj.value }}
+
+# Define multiple components inside one YAML by separating components using ---
+services:
+  service_1:
+    - name: aaa
+      port: 687
+----
+services:
+  service_1:
+    - name: aaa
+      port: 687

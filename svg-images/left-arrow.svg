@@ -1,0 +1,7 @@
+<symbol viewBox="0 0 1024 1024" id="left-arrow-svg-symbol">
+    <g stroke="" stroke-width="" fill="" stroke-linecap="round" stroke-dasharray="null" class="left-arrow-svg-layer">
+      <path
+        d="M896 480l-633.749333 0.661333 307.413333-307.413333L524.416 128 192.533333 459.861333A74.176 74.176 0 0 0 170.666667 512.661333c0 19.946667 7.765333 38.698667 21.866666 52.8l331.882667 331.861334 45.248-45.248-307.413333-307.413334L896 544v-64z" />
+      </path>
+    </g>
+  </symbol>

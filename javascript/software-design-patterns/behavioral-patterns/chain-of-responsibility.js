@@ -1,0 +1,1 @@
+// Chain of Responsibility Pattern Avoids coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. It forms a chain of receiver objects for the request.

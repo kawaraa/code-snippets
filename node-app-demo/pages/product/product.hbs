@@ -1,0 +1,37 @@
+const header = require("../../layout/header.hbs");
+const navbar = require("../../layout/navbar.hbs");
+const footer = require("../../layout/footer.hbs");
+const productTypes = require("./product-types.hbs");
+
+
+module.exports = ({user}) => `
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    ${header()}
+
+    <style>
+      /* =============== Mobile, IPads & Tablet styles =============== */
+      @media screen and (max-width: 850px) {}
+    </style>
+  </head>
+
+  <body>
+    ${navbar(user)}
+
+    <div class="root-container">
+      <main class="container product-page">
+
+      </main>
+    </div>
+
+    <script>
+
+    </script>
+
+    ${footer(user)}
+  </body>
+
+</html>
+`;

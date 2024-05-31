@@ -1,0 +1,1 @@
+// Bridge Pattern decouples an abstraction from its implementation, allowing them to vary independently. It's used when you want to avoid a permanent binding between an abstraction and its implementation, enabling them to evolve and change independently without affecting each other.

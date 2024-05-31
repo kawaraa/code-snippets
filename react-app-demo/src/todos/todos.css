@@ -1,0 +1,31 @@
+.todos.container {
+  position: relative;
+  padding: 5vh 5px 5px 5px;
+}
+.todos.error {
+  margin-top: 30vh;
+}
+.todos-heading {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.todos-wrapper {
+  min-height: 70vh;
+  padding: 10px 0;
+  list-style: none;
+}
+.todo-item.header {
+  box-shadow: none;
+  border-bottom: 0.5px solid gray;
+  border-radius: 0;
+  padding-bottom: 5px;
+}
+.todo-item.header * {
+  font-size: 18px;
+  font-weight: bold;
+}
+.no-todos {
+  margin-top: 20vh;
+  text-align: center;
+  font-size: 18px;
+}

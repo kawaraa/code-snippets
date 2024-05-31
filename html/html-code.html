@@ -1,0 +1,176 @@
+﻿<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" type="image/png" href="./hyf.png" />
+    <title>HYF-GITHUB</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title> HTML </title>
+    <style>
+      .p01 {
+        color: green;
+        border: 1px solid yellow;
+        padding: 30px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      table {
+        border-spacing: 15px;
+      }
+
+      #t02 {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+
+  <body>
+<div>
+
+  <label for="ice-cream-choice">Choose a flavor:</label>
+  <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+  <datalist id="ice-cream-flavors">
+    <option value="Chocolate">
+      <option value="Coconut">
+        <option value="Mint">
+          <option value="Strawberry">
+            <option value="Vanilla">
+            </datalist>
+          </div>
+
+    <br />
+    <br />
+
+    <div id="html_element">
+
+      <p>Point the mouse at <abbr title="World Health Organization">WHO</abbr> to see what will happen. And
+        also point it at the image of the Logo Kawara</p>
+      <hr>
+      
+      <b>Bold text</b>
+      <br>
+      <strong>Important text</strong>
+      <br>
+      <i>Italic text</i>
+      <br>
+      <em>Emphasized text</em>
+      <br>
+      <mark>Marked or highlighted text</mark>
+      <br>
+      <small>Small text</small>
+      <br>
+      <del>Deleted text</del>
+      <br>
+      <ins>Inserted text or lined the text</ins>
+      <br>
+      <sup>Superscript text - small and up</sup> Normal text <sub>Subscript text - small and down</sub>
+      <br>
+      <q>is for qoutes</q>
+      <br>
+      <i>&#8482;</i>
+      <i>&copy</i>
+      <i>&amp</i>
+      <i>&lt Hello &gt</i>
+      <i>is this you&#63</i>
+      <i style="font-size:30px;">&#9776;</i>
+      <hr>
+      <!-- Data Section start -->
+      <h2>Data Section. Here is for Data Tables, Lables, Data Containers, Forms, Ordered Lists and Unordered
+        Lists for iteams Etc.</h2>
+      <br>
+      <form action="" method=""> Comment: <br>
+        <fieldset>
+          <legend> Here you can write somthing </legend>
+          <br> Date of birth: <input type="date" name=""> Age: <input type="number" min="1" max="50">
+        </fieldset>
+      </form>
+      <div>
+
+        <p>Click on the computer, the phone or on the cup of coffee to go to a new page and read more about the
+          topic. </p>
+          <img src="workplace.jpg" usemap="#workmap" width="400" hight="379">
+          <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" href="mac.jpg">
+            <area shape="rect" coords="290,172,333,250" href="cellphone.jpg">
+            <area shape="circle" coords="337,300,44" href="coffeehouse.jpg">
+          </map>
+        </div>
+      <br>
+      <div>
+        
+        <p> Here Show one picture if the browser window (viewport) is a minimum of 650 pixels, and another image
+          if not, but larger than 465 pixels. see the HTML</p><br>
+          <picture>
+            <!-- don't display this at the moment <source media="(min-width: 650px)" srcset="Knitting-Balls.jpg"> -->
+            <source media="(min-width: 465px)" srcset="cellphone.jpg">
+            <img src="logo120" style="width:auto;">
+          </picture>
+        </div>
+        
+      <br>
+      <iframe src="HTML_CSS.htm" style="height:200px;width:1000px; border:none;" name="iframe01"></iframe>
+      <br>
+      <br><br>
+      <hr>
+      <hr>
+      <h3> <a id="styles"> </a> Here is the Styles section. </h3>
+    </div>
+    <br><br>
+    <!--here starts the Dropmenu navigation Bar -->
+    <br><br>
+    <h1>The CSS atributes </h1>
+    <table style="width:100%">
+      <tr>
+        <th>Length</th>
+        <th>Width</th>
+        <th>Thickness</th>
+        <th colspan="2">Color</th>
+      </tr>
+      <tr>
+        <td>150cm</td>
+        <td>75cm</td>
+        <td>35cm</td>
+        <td>White</td>
+        <td>Black</td>
+      </tr>
+      <tr>
+        <td>100cm</td>
+        <td>50cm</td>
+        <td>25cm</td>
+        <td>100cm</td>
+        <td>50cm</td>
+      </tr>
+    </table>
+    <br><br>
+    <table id="t02" style="width:100%">
+      <caption>Contact Information</caption>
+      <tr>
+        <th>Name:</th>
+        <td>Bill Gates</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Telephone:</th>
+        <td>55577854</td>
+      </tr>
+      <tr>
+        <td>55577855</td>
+      </tr>
+    </table>
+    <br>
+    <script src="./utility.js"></script>
+    <script src="./index.js"></script>
+  </body>
+
+</html>
