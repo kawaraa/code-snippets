@@ -10,7 +10,7 @@ class Translator {
   async translate(target, text, source) {
     try {
       const result = await this.fetch(this.getUrl(target, text, source)).then((res) => res.json());
-      return JSON.parse(result)[0][0][0];
+      return JSON.parse(result)[0].reduce((total, line) => total + line[0], "");
     } catch (error) {
       return text;
     }
