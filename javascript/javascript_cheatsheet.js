@@ -127,6 +127,27 @@ let object = { key1: 'value1', key2: 'value2' };  // Object
 let set = new Set([1, 2, 3]);       // Set
 let map = new Map([['key1', 'value1'], ['key2', 'value2']]);  // Map
 
+// Date and time
+
+const date = new Date();
+
+// If the Server located in the US (e.g., Eastern Time)
+console.log(date.toString());  // Outputs something like: Wed Jul 24 2024 08:34:56 GMT-0400 (Eastern Daylight Time)
+
+// If the server is located in Germany or EU zone
+console.log(date.toString());  // Outputs something like: Wed Jul 24 2024 14:34:56 GMT+0200 (Central European Summer Time)
+
+// In both cases, this method returns the same UTC time, while the .toString() method shows the local time
+console.log(date.toISOString());  // Outputs something like: 2024-07-24T12:34:56.789Z
+
+// Returns the date and time in specific timezone in this case, Amsterdam
+const options = { timeZone: "Europe/Amsterdam" , hour: "2-digit", minute: "2-digit",}
+console.log(new Date().toLocaleString("default", options));
+
+// Returns the date and time in specific timezone in this case, New York
+const options1 = { timeZone: 'America/New_York', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+console.log(new Intl.DateTimeFormat('en-US', options1).format(date)); 
+
 // Functions
 function myFunction(param1, param2) {
     // Function code here
