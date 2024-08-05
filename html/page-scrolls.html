@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll to Top</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+      }
+
+      .item {
+        flex: 0 0 auto;
+        height: 100vh; /* Ensure each item takes the full height of the viewport */
+        scroll-snap-align: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item" style="background-color: lightcoral">Item 1</div>
+      <div class="item" style="background-color: lightblue">Item 2</div>
+      <div class="item" style="background-color: lightgreen">Item 3</div>
+    </div>
+  </body>
+</html>
