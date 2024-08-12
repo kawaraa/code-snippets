@@ -164,3 +164,16 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
+
+# Set the node NODE_ENV variable to "production" permanently if not already set
+! [ -n "$NODE_ENV" ] && test -f ~/.bashrc && echo 'export NODE_ENV=production' >> ~/.bashrc && source ~/.bashrc
+! [ -n "$NODE_ENV" ] && test -f ~/.zshrc && echo 'export NODE_ENV=production' >> ~/.zshrc && source ~/.zshrc
+
+# Set the node NODE_ENV variable to "production" permanently if not already set
+if [ -n "$NODE_ENV" ]; then
+    echo "Variable is already set to '$NODE_ENV'"
+else
+    test -f ~/.bashrc && echo 'export NODE_ENV=production' >> ~/.bashrc && source ~/.bashrc
+    test -f ~/.zshrc && echo 'export NODE_ENV=production' >> ~/.zshrc && source ~/.zshrc
+    echo "Variable is now set to '$NODE_ENV'"
+fi
