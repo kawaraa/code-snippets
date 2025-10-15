@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Page Print Solution</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f7fa;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+
+      button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      #printBtn {
+        background-color: #2ecc71;
+      }
+
+      #printBtn:hover {
+        background-color: #27ae60;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+      }
+
+      tr:hover {
+        background-color: #f5f7fa;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+      }
+
+      .pagination button {
+        padding: 8px 16px;
+        background-color: #ecf0f1;
+        color: #2c3e50;
+      }
+
+      .pagination button.active {
+        background-color: #3498db;
+        color: white;
+      }
+
+      /* Print-specific styles */
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+
+        .print-section,
+        .print-section * {
+          visibility: visible;
+        }
+
+        .print-section {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+
+        .item {
+          page-break-after: always;
+          break-after: page;
+        }
+
+        .no-print {
+          display: none !important;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+
+        th,
+        td {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Multi-Page Print Solution</h1>
+
+      <div class="controls no-print">
+        <button id="printBtn">Print All Items</button>
+        <button id="viewBtn">View Print Preview</button>
+      </div>
+
+      <div class="pagination no-print">
+        <button id="prevBtn">Previous</button>
+        <span>Page <span id="currentPage">1</span> of <span id="totalPages">10</span></span>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <div class="print-section" id="printSection">
+        <!-- Items will be dynamically added here -->
+      </div>
+    </div>
+
+    <script>
+      // Generate sample data
+      function generateItems(count) {
+        const items = [];
+        for (let i = 1; i <= count; i++) {
+          items.push({
+            id: i,
+            name: `Item ${i}`,
+            description: `This is a detailed description for item ${i}`,
+            category: `Category ${Math.ceil(i / 100)}`,
+            price: `$${(Math.random() * 100).toFixed(2)}`,
+          });
+        }
+        return items;
+      }
+
+      // Render items for printing
+      function renderItemsForPrint(items) {
+        const printSection = document.getElementById("printSection");
+        printSection.innerHTML = "";
+
+        items.forEach((item) => {
+          const itemDiv = document.createElement("div");
+          itemDiv.className = "item";
+          itemDiv.innerHTML = `
+                    <h2>${item.name}</h2>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <td>${item.id}</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                            <td>${item.description}</td>
+                        </tr>
+                        <tr>
+                            <th>Category</th>
+                            <td>${item.category}</td>
+                        </tr>
+                        <tr>
+                            <th>Price</th>
+                            <td>${item.price}</td>
+                        </tr>
+                    </table>
+                    <hr>
+                `;
+          printSection.appendChild(itemDiv);
+        });
+      }
+
+      // Pagination for screen view
+      function renderItemsForScreen(items, page = 1, itemsPerPage = 10) {
+        const printSection = document.getElementById("printSection");
+        printSection.innerHTML = "";
+
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = Math.min(startIndex + itemsPerPage, items.length);
+        const pageItems = items.slice(startIndex, endIndex);
+
+        // Create table for screen view
+        const table = document.createElement("table");
+
+        // Table header
+        const thead = document.createElement("thead");
+        thead.innerHTML = `
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+            `;
+        table.appendChild(thead);
+
+        // Table body
+        const tbody = document.createElement("tbody");
+        pageItems.forEach((item) => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.description}</td>
+                    <td>${item.category}</td>
+                    <td>${item.price}</td>
+                `;
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+
+        printSection.appendChild(table);
+
+        // Update pagination info
+        document.getElementById("currentPage").textContent = page;
+        document.getElementById("totalPages").textContent = Math.ceil(items.length / itemsPerPage);
+
+        // Update button states
+        document.getElementById("prevBtn").disabled = page === 1;
+        document.getElementById("nextBtn").disabled = page === Math.ceil(items.length / itemsPerPage);
+      }
+
+      // Initialize the application
+      document.addEventListener("DOMContentLoaded", function () {
+        const items = generateItems(1000);
+        let currentPage = 1;
+
+        // Initial render for screen
+        renderItemsForScreen(items, currentPage);
+
+        // Print button handler
+        document.getElementById("printBtn").addEventListener("click", function () {
+          // Render all items for printing
+          renderItemsForPrint(items);
+
+          // Wait a moment for DOM to update, then print
+          setTimeout(() => {
+            window.print();
+
+            // After printing, return to screen view
+            setTimeout(() => {
+              renderItemsForScreen(items, currentPage);
+            }, 500);
+          }, 100);
+        });
+
+        // View print preview handler
+        document.getElementById("viewBtn").addEventListener("click", function () {
+          renderItemsForPrint(items);
+          window.print();
+
+          // After printing, return to screen view
+          setTimeout(() => {
+            renderItemsForScreen(items, currentPage);
+          }, 500);
+        });
+
+        // Pagination handlers
+        document.getElementById("prevBtn").addEventListener("click", function () {
+          if (currentPage > 1) {
+            currentPage--;
+            renderItemsForScreen(items, currentPage);
+          }
+        });
+
+        document.getElementById("nextBtn").addEventListener("click", function () {
+          const totalPages = Math.ceil(items.length / 10);
+          if (currentPage < totalPages) {
+            currentPage++;
+            renderItemsForScreen(items, currentPage);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
