@@ -426,6 +426,11 @@ const range = (start, stop, step) =>
   Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 console.log(range(0, 4, 1)); // [0, 1, 2, 3, 4] - Generate numbers range 0..4
 console.log(range(4, 10, 2)); // [ 4, 6, 8, 10 ]
+Array(100).fill(0); // Result: [0, 0, 0, ..., 0]
+Array.from({ length: 100 }, (_, i) => i); // Generate array [0, 1, 2, ..., 99]
+[...Array(100).keys()]; // Result: [0, 1, 2, ..., 99]
+// For most use cases, Array.from() is the best choice as it's: Readable, clean and Performant
+
 
 // Generate the alphabet using Array.from making use of it being ordered as a sequence
 range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((x) => String.fromCharCode(x));
