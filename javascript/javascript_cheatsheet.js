@@ -293,7 +293,9 @@ let { key1, key2 } = { key1: 'value1', key2: 'value2' };  // Object destructurin
 
 // Spread and Rest Operators
 let spreadArray = [...array];             // Spread operator to copy an array
-let spreadObject = { ...object };         // Spread operator to copy an object
+let spreadObject = { ...object };         // Spread operator to shallow copy an object
+let deepCopyObject = structuredClone({ x: { y: {z:"abc"} } }) // To deeply copy object including the nested ones
+
 function restFunction(...args) {          // Rest operator to collect arguments
     // Function code here
 }
